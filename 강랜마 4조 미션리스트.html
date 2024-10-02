@@ -6,33 +6,33 @@
 </head>
 <body>
 <style>
-  body {					/* 기초 화면 세팅 */
-    display: flex;			/* 화면 요소를 플렉스 박스로 설정하여 유연한 레이아웃 제공 */
-    flex-direction: column;		/* 플렉스 아이템을 세로 방향으로 정렬 */
-    align-items: center;		/* 플렉스 아이템을 수평 중앙으로 정렬 */
-    margin: 0;				/* 기본 마진을 없애서 여백 제거 */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
   }
-  form {					/* 폼 요소 중앙 정렬 */
-    text-align: center;			/* 폼 내부 텍스트와 컨텐츠를 중앙 정렬 */
+  form {
+    text-align: center;
   }
-  select {					/* 선택 상자 스타일 */
-    width: 70px;			/* 선택 상자의 너비를 70px로 설정 */
-    padding: 5px;			/* 선택 상자 안의 패딩을 5px로 설정 */
-    font-size: 14px;			/* 글자 크기를 14px로 설정 */
-    margin: 10px 0;			/* 선택 상자의 위아래 여백을 10px로 설정 */
+  select {
+    width: 70px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 10px 0;
   }
-  #result {				/* 결과 텍스트 스타일 */
-    margin-top: 20px;		/* 결과 텍스트의 상단에 20px 여백 추가 */
-    font-size: 16px;			/* 결과 텍스트의 글자 크기를 16px로 설정 */
-    font-weight: bold;		/* 결과 텍스트를 굵게 표시 */
+  #result {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
   }
   .different-font {
-    font-family: 'monospace', sans-serif;  /* 원하는 폰트로 변경 */
-    font-size: 18px;  /* 폰트 크기도 변경 가능 */
-    font-weight: bold;  /* 폰트 굵기 변경 */
+    font-family: 'monospace', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
   }
   .right-align {
-    text-align: right;  /* 오른쪽 정렬을 원하는 부분에만 적용 */
+    text-align: right;
   }
   .mission-item {
     display: flex;
@@ -559,7 +559,6 @@
   function calculateSum() {
     let sum = 0;
 
-    // 모든 select 요소를 선택
     const selectElements = document.querySelectorAll('select[id^="select"]');
 
     selectElements.forEach(selectElement => {
