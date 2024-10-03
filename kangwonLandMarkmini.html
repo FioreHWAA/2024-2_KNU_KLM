@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <title> 미션리스트 semi </title>
+</head>
+<body>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  form {
+    text-align: center;
+  }
+  select {
+    width: 70px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  #result {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .different-font {
+    font-family: 'monospace', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .different-font1 {
+    font-family: 'monospace', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .right-align {
+    text-align: right;
+  }
+  .mission-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+</style>
+<form>
+  <br><br><br>
+  4조 할만한 미션 리스트 - 10월 3일 새벽 기준
+  <br>
+  지금 37점이라 할만함
+  <br><br><br>
+  <div class = "different-font">1점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 팀명 만들기
+        <select id="select1" onchange="calculateSum()">
+          <option value="1"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li>
+    </ol>
+  </div><br><br><br>
+  <div class = "different-font">2점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 같이 루미큐브 온라인 하기
+        <select id="select2" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 동방 청소하기
+        <select id="select3" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 드레스코드 맞춰서 사진찍기 - 과잠 가능?
+        <select id="select4" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 롤링페이퍼 서로 해주기
+        <select id="select5" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 백령마루에서 항공샷 찍기 - 여기가 어디에요?
+        <select id="select6" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 조별활동 안하는 임원 찾아서 보드게임하기 - <span class = "different-font1">기회 얼마 없음</span>
+  <select id="select7" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 수호랑&반다비 옆에서 따라하기
+        <select id="select8" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 스틱스틱 20개...이거 가능함?
+        <select id="select9" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 인생네컷 찍기
+        <select id="select10" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 부회장이랑 보드게임하기 - <span class = "different-font1">기회 얼마 없음</span>
+        <select id="select11" onchange="calculateSum()">
+          <option value="2"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+    </ol>
+  </div><br><br><br>
+  <div class = "different-font">3점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 같이 학식 먹기
+        <select id="select12" onchange="calculateSum()">
+          <option value="3"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 난이도 중간이상 보드게임하기
+        <select id="select13" onchange="calculateSum()">
+          <option value="3"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 노래방가기
+        <select id="select14" onchange="calculateSum()">
+          <option value="3"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 동방에 우리조만 있을때 사진찍기
+        <select id="select15" onchange="calculateSum()">
+          <option value="3"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 동방에서 배달 먹기
+        <select id="select16" onchange="calculateSum()">
+          <option value="3"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+    </ol>
+  </div><br><br><br>
+  <div class = "different-font">4점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 강대에서 가장 오래된 건물 앞에서 사진 찍기
+        <select id="select17" onchange="calculateSum()">
+          <option value="4"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 볼링장 가기
+        <select id="select18" onchange="calculateSum()">
+          <option value="4"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 점보라면 먹기
+        <select id="select19" onchange="calculateSum()">
+          <option value="4"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 편맥하기/칵테일바 먹기
+        <select id="select20" onchange="calculateSum()">
+          <option value="4"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+    </ol>
+  </div><br><br><br>
+  <div class = "different-font">5점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 동방에서 오전 5시까지 밤새기
+        <select id="select21" onchange="calculateSum()">
+          <option value="5"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+      <li> 사진속 장소에서 사진 찍기 - 하나만 찾으면 됌
+        <select id="select22" onchange="calculateSum()">
+          <option value="5"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+    </ol>
+  </div><br><br><br>
+  <div class = "different-font">7점 미션 & 10점 미션</div>
+  <div class = "right-align">
+    <ol>
+      <li> 10점 강대 건물 20개 이상 들어가기
+        <select id="select23" onchange="calculateSum()">
+          <option value="10"> O </option>
+          <option value="0" selected>X </option>
+        </select>
+      </li><br>
+    </ol>
+  </div><br><br><br>
+  <div id="result"> 총점: </div>
+  <br><br><br><br><br>
+</form>
+<script> // 자바스크립트 부분에서 내가 한거 없음 ㅋㅋㅋㅋㅋ
+  function calculateSum() {
+    let sum = 0;
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+
+    selectElements.forEach(selectElement => {
+      const value = parseFloat(selectElement.value);
+      if (!isNaN(value)) {
+        sum += value;
+      }
+    });
+
+    document.getElementById('result').innerText = '총점: ' + sum;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSum();
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+    selectElements.forEach(select => {
+      select.addEventListener('change', calculateSum);
+    });
+  });
+</script>
+</body>
+</html>
