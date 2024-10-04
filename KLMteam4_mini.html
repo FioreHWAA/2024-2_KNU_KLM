@@ -26,6 +26,11 @@
     font-size: 16px;
     font-weight: bold;
   }
+  #result1 {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
   .different-font {
     font-family: 'monospace', sans-serif;
     font-size: 18px;
@@ -221,6 +226,7 @@
     </ol>
   </div><br><br><br>
   <div id="result"> 총점: </div>
+  <div id="result1"> 전체 총점: </div>
   <br><br><br><br><br>
 </form>
 <script> // 자바스크립트 부분에서 내가 한거 없음 ㅋㅋㅋㅋㅋ
@@ -237,6 +243,7 @@
     });
 
     document.getElementById('result').innerText = '총점: ' + sum;
+    document.getElementById('result1').innerText = '전체 총점: ' + (sum + 37);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
